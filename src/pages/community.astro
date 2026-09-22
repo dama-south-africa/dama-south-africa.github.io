@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// TODO: replace the "#" links with the real Meetup / registration URLs.
+// The DAMA South Africa Meetup group — where meetings and SIG events are listed.
+const meetup = 'https://www.meetup.com/dama-sa-data-management-meetup/';
+
 const groups = [
   {
     name: 'Data Protection for Data Management Professionals',
@@ -9,7 +11,7 @@ const groups = [
     hosts: null,
     blurb:
       'Addresses data protection responsibilities within organisations. Current work includes a data protection ontology, a conceptual mind map, and dimensional models for reporting on data breaches and privacy impact assessments.',
-    rsvp: '#',
+    rsvp: meetup,
   },
   {
     name: 'Big Data and Big Science',
@@ -17,7 +19,7 @@ const groups = [
     hosts: 'Mishumo Dzhivhuho & Drew Kennedy',
     blurb:
       'A public group running monthly meetups with guest speakers and panel discussions on Big Data, Data Science, AI and Machine Learning.',
-    rsvp: '#',
+    rsvp: meetup,
   },
   {
     name: 'Data Modeling Special Interest Group',
@@ -25,7 +27,7 @@ const groups = [
     hosts: 'Paul Grobler',
     blurb:
       'Explores data modeling paradigms and their business applications through guest presentations, panel discussions and knowledge sharing.',
-    rsvp: '#',
+    rsvp: meetup,
   },
 ];
 ---
@@ -49,7 +51,7 @@ const groups = [
           Educational presentations, discussion of data management topics, and
           networking with fellow practitioners.
         </p>
-        <a class="btn btn-primary" href="#" rel="noopener" target="_blank">RSVP for the next meeting</a>
+        <a class="btn btn-primary" href={meetup} rel="noopener" target="_blank">RSVP for the next meeting</a>
       </div>
     </div>
   </section>
