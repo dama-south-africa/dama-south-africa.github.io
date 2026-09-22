@@ -30,7 +30,7 @@ const isActive = (href: string): boolean =>
     <nav class="site-nav" aria-label="Primary">
       {
         links.map((link) => (
-          
+          <a
             href={link.href}
             class:list={['nav-link', { active: isActive(link.href) }]}
             aria-current={isActive(link.href) ? 'page' : undefined}
