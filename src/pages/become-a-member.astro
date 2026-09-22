@@ -8,6 +8,10 @@ const benefits = [
   'Mentoring and networking with regional data professionals',
   'Connection to the global DAMA International community',
 ];
+
+// Online membership join portal.
+const joinUrl =
+  'https://join.mymembership.co.za/Join/Index?communityId=3eb77fbc-7cc9-4365-adea-e50a1ce04b95';
 ---
 
 <Layout title="Become a Member — DAMA South Africa">
@@ -31,13 +35,14 @@ const benefits = [
         </div>
         <div class="card">
           <h3>Ready to join?</h3>
-          <p class="meta">Membership enquiries</p>
+          <p class="meta">Online membership</p>
           <p>
-            Get in touch and the committee will guide you through membership and
-            payment. We'd love to have you involved.
+            Sign up online through our membership portal — it only takes a few
+            minutes. Questions first? Email
+            <a href="mailto:membership@dama.org.za">membership@dama.org.za</a>.
           </p>
-          <a class="btn btn-primary" href="mailto:membership@dama.org.za?subject=Membership%20enquiry">
-            Email membership@dama.org.za
+          <a class="btn btn-primary" href={joinUrl} rel="noopener" target="_blank">
+            Join DAMA South Africa
           </a>
         </div>
       </div>
