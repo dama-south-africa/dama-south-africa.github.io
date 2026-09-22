@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const board = [
+  {
+    name: 'Howard Diesel',
+    role: 'President',
+    photo: '/howard-diesel.jpg',
+    linkedin: 'https://za.linkedin.com/in/howarddiesel-cdmp-dmbok-modelwaresystems',
+  },
+  {
+    name: 'Abeda Essop',
+    role: 'Vice President',
+    photo: '/abeda-essop.jpg',
+    linkedin: 'https://www.linkedin.com/in/abeda-essop-79a216a/',
+  },
+  {
+    name: 'Veronica Diesel',
+    role: 'Membership Services & Education',
+    photo: '/veronica-diesel.jpg',
+    linkedin: 'https://www.linkedin.com/in/veronica-diesel-68b52b77/',
+  },
+  {
+    name: 'Paul Grobler',
+    role: 'Ethics Officer',
+    photo: '/paul-grobler.jpg',
+    linkedin: 'https://www.linkedin.com/in/pgrobler101/',
+  },
+  {
+    name: 'Siyabonga Nene',
+    role: 'Digital & Events',
+    photo: null,
+    linkedin: null,
+  },
+];
+---
+
+<Layout title="Board — DAMA South Africa">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Leadership</span>
+        <h1>Meet the Board</h1>
+        <p class="lead">
+          DAMA South Africa is run by a volunteer board of data management
+          practitioners.
+        </p>
+      </div>
+
+      <div class="board-grid">
+        {
+          board.map((m) => (
+            <div class="board-card">
+              {m.photo ? (
+                <img
+                  class="board-photo"
+                  src={m.photo}
+                  alt={m.name}
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="board-photo placeholder" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21a8 8 0 0 1 16 0" />
+                  </svg>
+                </div>
+              )}
+              <h3>{m.name}</h3>
+              <p class="role">{m.role}</p>
+              {m.linkedin && (
+                
+                  class="board-linkedin"
+                  href={m.linkedin}
+                  rel="noopener"
+                  target="_blank"
+                  aria-label={`${m.name} on LinkedIn`}
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V24H8V8z" />
+                  </svg>
+                </a>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem 1.5rem;
+    max-width: 1000px;
+  }
+  .board-card {
+    text-align: center;
+  }
+  .board-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--blue-tint);
+  }
+  .board-photo.placeholder {
+    display: grid;
+    place-items: center;
+    background: #e5e8f0;
+    color: #9aa3b2;
+  }
+  .board-photo.placeholder svg {
+    width: 66px;
+    height: 66px;
+  }
+  .board-card h3 {
+    margin: 0 0 0.15rem;
+    font-size: 1.1rem;
+  }
+  .board-card .role {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .board-linkedin {
+    display: inline-flex;
+    margin-top: 0.55rem;
+    color: var(--muted);
+    transition: color 0.15s ease;
+  }
+  .board-linkedin:hover {
+    color: var(--blue);
+  }
+</style>
