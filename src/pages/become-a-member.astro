@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const benefits = [
+  'Access to monthly chapter meetings and presentations',
+  'Participation in the special interest groups',
+  'Guidance on CDMP certification pathways',
+  'Mentoring and networking with regional data professionals',
+  'Connection to the global DAMA International community',
+];
+---
+
+<Layout title="Become a Member — DAMA South Africa">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Membership</span>
+        <h1>Become a Member</h1>
+        <p class="lead">
+          Join a community of data management practitioners across South Africa
+          and take part in everything the chapter offers.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="prose">
+          <h3>Why join</h3>
+          <ul>
+            {benefits.map((b) => <li>{b}</li>)}
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Ready to join?</h3>
+          <p class="meta">Membership enquiries</p>
+          <p>
+            Get in touch and the committee will guide you through membership and
+            payment. We'd love to have you involved.
+          </p>
+          <a class="btn btn-primary" href="mailto:membership@dama.org.za?subject=Membership%20enquiry">
+            Email membership@dama.org.za
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

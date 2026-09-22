@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// TODO: replace the "#" links with the real Meetup / registration URLs.
+const groups = [
+  {
+    name: 'Data Protection for Data Management Professionals',
+    when: 'See Meetup for schedule',
+    hosts: null,
+    blurb:
+      'Addresses data protection responsibilities within organisations. Current work includes a data protection ontology, a conceptual mind map, and dimensional models for reporting on data breaches and privacy impact assessments.',
+    rsvp: '#',
+  },
+  {
+    name: 'Big Data and Big Science',
+    when: 'Third Monday, monthly',
+    hosts: 'Mishumo Dzhivhuho & Drew Kennedy',
+    blurb:
+      'A public group running monthly meetups with guest speakers and panel discussions on Big Data, Data Science, AI and Machine Learning.',
+    rsvp: '#',
+  },
+  {
+    name: 'Data Modeling Special Interest Group',
+    when: 'First Monday, monthly',
+    hosts: 'Paul Grobler',
+    blurb:
+      'Explores data modeling paradigms and their business applications through guest presentations, panel discussions and knowledge sharing.',
+    rsvp: '#',
+  },
+];
+---
+
+<Layout title="Community — DAMA South Africa">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Community</span>
+        <h1>Meetings &amp; Special Interest Groups</h1>
+        <p class="lead">
+          The chapter runs a monthly meeting plus focused special interest
+          groups. Everyone with an interest in data management is welcome.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Monthly chapter meeting</h3>
+        <p class="meta">Third Wednesday of each month</p>
+        <p>
+          Educational presentations, discussion of data management topics, and
+          networking with fellow practitioners.
+        </p>
+        <a class="btn btn-primary" href="#" rel="noopener" target="_blank">RSVP for the next meeting</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Get involved</span>
+        <h2>Special Interest Groups</h2>
+      </div>
+      <div class="grid grid-3">
+        {groups.map((g) => (
+          <div class="card">
+            <h3>{g.name}</h3>
+            <p class="meta">{g.when}{g.hosts ? ` · ${g.hosts}` : ''}</p>
+            <p>{g.blurb}</p>
+            <a class="card-link" href={g.rsvp} rel="noopener" target="_blank">Register / RSVP &rarr;</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
