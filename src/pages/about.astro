@@ -1,13 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// TODO: replace with the real board members from the current site.
-const board = [
-  { name: 'Board member', role: 'Chairperson' },
-  { name: 'Board member', role: 'Vice Chair' },
-  { name: 'Board member', role: 'Treasurer' },
-  { name: 'Board member', role: 'Secretary' },
-];
 ---
 
 <Layout title="About — DAMA South Africa">
@@ -53,24 +45,6 @@ const board = [
           <h3>Mentoring</h3>
           <p>Initiatives that pair experienced practitioners with professionals developing their data management careers.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Leadership</span>
-        <h2>Meet the board</h2>
-        <p class="lead">The chapter is run by a volunteer board of data management practitioners.</p>
-      </div>
-      <div class="grid grid-3">
-        {board.map((p) => (
-          <div class="card">
-            <h3>{p.name}</h3>
-            <p class="meta">{p.role}</p>
-          </div>
-        ))}
       </div>
     </div>
   </section>
