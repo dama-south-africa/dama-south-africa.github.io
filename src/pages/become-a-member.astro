@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 
 const benefits = [
-  'Access to monthly chapter meetings and presentations',
-  'Participation in the special interest groups',
-  'Guidance on CDMP certification pathways',
-  'Mentoring and networking with regional data professionals',
-  'Connection to the global DAMA International community',
+  'Attend every monthly online chapter meeting and presentation',
+  'Take part in the special interest groups — data protection, big data & data science, and data modeling',
+  'CDMP certification support: guidance, a weekly Q&A webinar, and partner training',
+  'Mentoring and networking with data professionals across industries',
+  'Connection to the global DAMA International community and the DMBOK',
 ];
 
 // Online membership join portal — create a DAMA profile.
@@ -16,7 +16,7 @@ const joinUrl =
 
 <Layout
   title="Become a Member — DAMA South Africa"
-  description="Become a member of DAMA South Africa and join a network of data management professionals — chapter meetings, SIGs, CDMP support, mentoring and more."
+  description="Join DAMA South Africa for R450 a year — a network of data management professionals with chapter meetings, SIGs, CDMP support, mentoring and the global DAMA community."
 >
   <section class="section">
     <div class="container">
@@ -35,18 +35,31 @@ const joinUrl =
           <ul>
             {benefits.map((b) => <li>{b}</li>)}
           </ul>
+          <p>
+            Membership suits anyone serious about data management —
+            practitioners and specialists, managers and team leads, and
+            professionals moving into the field. It's open to everyone with an
+            interest in data management.
+          </p>
         </div>
         <div class="card">
           <h2>Ready to join?</h2>
-          <p class="meta">Online membership</p>
+          <p class="meta">R450 per year · individual membership</p>
           <p>
-            Sign up online through our membership portal — it only takes a few
-            minutes. Questions first? Email
+            Standard individual membership is <strong>R450 per year</strong> and
+            is open to everyone. Sign up online in a few minutes — click
+            <em>Create a DAMA profile</em> — and the committee will help you get
+            involved. Questions first? Email
             <a href="mailto:membership@dama.org.za">membership@dama.org.za</a>.
           </p>
           <a class="btn btn-primary" href={joinUrl} rel="noopener" target="_blank">
             Create a DAMA profile
           </a>
+          <p class="meta mt-3">
+            Organisations: there is no corporate membership, but you can request
+            Corporate Certificates —
+            <a href="mailto:membership@dama.org.za">email us</a> to arrange.
+          </p>
         </div>
       </div>
     </div>

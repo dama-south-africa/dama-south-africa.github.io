@@ -4,34 +4,46 @@ import Layout from '../layouts/Layout.astro';
 const faq = [
   {
     q: 'What is DAMA South Africa?',
-    a: 'DAMA South Africa is the South African chapter of DAMA International, a community of technical and business professionals dedicated to advancing the concepts and practices of information and data management. The chapter was established in 2006.',
+    a: "DAMA South Africa is the South African chapter of DAMA International, a global not-for-profit community of technical and business professionals dedicated to advancing the concepts and practices of information and data management. The chapter was established in 2006.",
   },
   {
-    q: 'When are the chapter meetings?',
-    a: 'The chapter meets on the third Wednesday of every month, with educational presentations, discussion of data management topics, and networking with fellow practitioners.',
+    q: 'What is the DMBOK?',
+    a: "The DAMA Guide to the Data Management Body of Knowledge (DMBOK) is the reference framework that defines the knowledge areas of data management — from data governance, architecture and modelling to data quality, security, metadata and more.",
   },
   {
-    q: 'What is the CDMP certification?',
-    a: 'The Certified Data Management Professional (CDMP) is DAMA International\u2019s professional certification. DAMA South Africa offers guidance and support on the CDMP pathways at every level.',
+    q: 'When and where are the chapter meetings?',
+    a: "The chapter meets on the third Wednesday of every month. Meetings are held online — announced and RSVP'd through our Meetup group and run on Microsoft Teams — with an educational presentation, discussion of a data management topic, and networking.",
+  },
+  {
+    q: 'What is the CDMP certification, and how does the chapter help?',
+    a: "The Certified Data Management Professional (CDMP) is DAMA International's globally recognised certification, based on the DMBOK. DAMA South Africa supports members pursuing it with guidance and a weekly CDMP Q&A webinar every Friday, and formal training is delivered through our partners, Modelware Systems and Info.Blueprint.",
+  },
+  {
+    q: 'Do I have to be a member to attend?',
+    a: "No. Chapter meetings and the special interest groups are open to anyone with an interest in data management. Membership adds deeper involvement and the full set of member benefits.",
+  },
+  {
+    q: 'Is DAMA South Africa only for technical people?',
+    a: "No. Data management is as much about business, governance and process as it is about technology, and our community includes practitioners, managers and newcomers from every background.",
   },
   {
     q: 'What special interest groups does DAMA South Africa run?',
-    a: 'The chapter runs three special interest groups: data protection, big data & data science, and data modeling.',
+    a: "The chapter runs three special interest groups: data protection for data management professionals, big data & big science (data science, AI and machine learning), and data modeling.",
   },
   {
     q: 'Does DAMA South Africa offer mentoring?',
-    a: 'Yes. DAMA South Africa connects experienced practitioners with data professionals who are growing their careers.',
+    a: "Yes. DAMA South Africa connects experienced practitioners with data professionals who are growing their careers.",
   },
   {
-    q: 'How do I become a member?',
-    a: 'Visit the Become a Member page or email membership@dama.org.za to join the community.',
+    q: 'How much does membership cost and how do I join?',
+    a: "Standard individual membership is R450 per year and is open to anyone with an interest in data management. You can join online in a few minutes from the Become a Member page, or email membership@dama.org.za with any questions.",
   },
 ];
 ---
 
 <Layout
   title="About — DAMA South Africa"
-  description="Learn about DAMA South Africa — our mission, CDMP certification guidance, mentoring, and the special interest groups advancing data management practice since 2006."
+  description="Learn about DAMA South Africa — our mission, CDMP certification guidance and training, mentoring, and the special interest groups advancing data management practice since 2006."
   faq={faq}
 >
   <section class="section">
@@ -40,7 +52,7 @@ const faq = [
         <span class="eyebrow">About us</span>
         <h1>About DAMA South Africa</h1>
         <p class="lead">
-          DAMA South Africa is a local chapter of DAMA International, the global
+          DAMA South Africa is the local chapter of DAMA International, the global
           not-for-profit association for data management professionals.
         </p>
       </div>
@@ -48,10 +60,27 @@ const faq = [
         <p>
           Our mission is to promote the understanding, development and practice
           of managing data and information as key enterprise assets. Established
-          in 2006, the chapter hosts monthly meetings featuring educational
-          presentations and networking opportunities, and nurtures a community
-          of data professionals who recognise the value of data to their
-          organisations.
+          in 2006, the chapter brings together the people who manage data across
+          South African organisations — to share knowledge, raise professional
+          standards, and grow the practice of data management in the region.
+        </p>
+        <p>
+          As the South African chapter of DAMA International, we connect local
+          practitioners to a worldwide body of knowledge — including the DAMA
+          Guide to the Data Management Body of Knowledge (DMBOK) and the CDMP
+          certification — while focusing on the topics and regulation that matter
+          here, from data governance and data quality to data protection under
+          POPIA.
+        </p>
+        <p>
+          Every organisation now runs on data, but data only creates value when
+          it is well governed, trusted and understood. Data management is the
+          discipline that makes that possible, and our community exists to help
+          practitioners do that work well — whether you are a data manager,
+          architect, modeller, engineer, analyst, governance or quality
+          specialist, a business person who works with data, or someone building
+          a career in the field. You don't need to be a member, or a specialist,
+          to take part.
         </p>
       </div>
     </div>
@@ -66,11 +95,11 @@ const faq = [
       <div class="grid grid-3">
         <div class="card">
           <h3>Knowledge sharing</h3>
-          <p>Special interest groups and monthly meetings where members exchange practical experience across data management disciplines.</p>
+          <p>Monthly chapter meetings and special interest groups where members exchange practical, real-world experience across the data management disciplines.</p>
         </div>
         <div class="card">
-          <h3>CDMP certification</h3>
-          <p>Guidance on the Certified Data Management Professional programme and its certification levels.</p>
+          <h3>Certification &amp; training</h3>
+          <p>Guidance, a weekly CDMP Q&amp;A webinar, and training with our partners to help members earn the globally recognised CDMP credential.</p>
         </div>
         <div class="card">
           <h3>Mentoring</h3>
@@ -81,6 +110,40 @@ const faq = [
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">CDMP</span>
+        <h2>Certification and training</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The Certified Data Management Professional (CDMP) is DAMA
+          International's globally recognised certification for the profession,
+          based on the DMBOK. It's the credential that demonstrates real,
+          rounded competence across the data management knowledge areas.
+        </p>
+        <p>
+          DAMA South Africa helps members working toward it with practical
+          guidance and a
+          <a
+            href="https://www.meetup.com/dama-sa-data-management-meetup/events/316428434/"
+            rel="noopener"
+            target="_blank">weekly CDMP Q&amp;A webinar every Friday</a
+          >, where you can ask questions and prepare for the exams. Formal
+          training is delivered through our partners,
+          <a href="https://www.modelwaresystems.com/" rel="noopener" target="_blank"
+            >Modelware Systems</a
+          >
+          and
+          <a href="https://infoblueprint.co.za/" rel="noopener" target="_blank"
+            >Info.Blueprint</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">FAQ</span>

@@ -10,7 +10,7 @@ const groups = [
     when: 'See Meetup for schedule',
     hosts: null,
     blurb:
-      'Addresses data protection responsibilities within organisations. Current work includes a data protection ontology, a conceptual mind map, and dimensional models for reporting on data breaches and privacy impact assessments.',
+      'Addresses the data protection responsibilities that sit within every organisation — increasingly important under POPIA. Current work includes a data protection ontology, a conceptual mind map, and dimensional models for reporting on data breaches and privacy impact assessments.',
     rsvp: meetup,
   },
   {
@@ -18,7 +18,7 @@ const groups = [
     when: 'Third Monday, monthly',
     hosts: 'Mishumo Dzhivhuho',
     blurb:
-      'A public group running monthly meetups with guest speakers and panel discussions on Big Data, Data Science, AI and Machine Learning.',
+      'A public group running monthly meetups with guest speakers and panel discussions on Big Data, Data Science, AI and Machine Learning — connecting the data management community with the wider analytics world.',
     rsvp: meetup,
   },
   {
@@ -26,7 +26,7 @@ const groups = [
     when: 'First Monday, monthly',
     hosts: 'Paul Grobler',
     blurb:
-      'Explores data modeling paradigms and their business applications through guest presentations, panel discussions and knowledge sharing.',
+      'Explores data modeling paradigms and their business applications through guest presentations, panel discussions and shared practical experience — for anyone who designs, reviews or works with data models.',
     rsvp: meetup,
   },
 ];
@@ -34,7 +34,7 @@ const groups = [
 
 <Layout
   title="Community — DAMA South Africa"
-  description="DAMA South Africa monthly chapter meetings on the third Wednesday, plus special interest groups on data protection, big data & data science, and data modeling."
+  description="DAMA South Africa's online monthly chapter meetings on the third Wednesday, plus special interest groups on data protection, big data & data science, and data modeling."
 >
   <section class="section">
     <div class="container">
@@ -42,17 +42,24 @@ const groups = [
         <span class="eyebrow">Community</span>
         <h1>Meetings &amp; Special Interest Groups</h1>
         <p class="lead">
-          The chapter runs a monthly meeting plus focused special interest
-          groups. Everyone with an interest in data management is welcome.
+          Our community is built around regular, practitioner-led gatherings.
+          Everyone with an interest in data management is welcome — members and
+          newcomers alike — whether you come to learn, to share your own
+          experience, or simply to meet others doing this work.
         </p>
       </div>
 
       <div class="card">
         <h2>Monthly chapter meeting</h2>
-        <p class="meta">Third Wednesday of each month</p>
+        <p class="meta">Third Wednesday of each month · Online (Microsoft Teams)</p>
         <p>
-          Educational presentations, discussion of data management topics, and
-          networking with fellow practitioners.
+          Each month the chapter meets online for an educational presentation,
+          discussion of a data management topic, and networking with fellow
+          practitioners. Sessions span the full breadth of data management —
+          governance, quality, modelling, architecture, protection, analytics
+          and more — and draw people from many industries and every level of
+          experience. Meetings are announced and RSVP'd through our Meetup group
+          and run on Microsoft Teams.
         </p>
         <a class="btn btn-primary" href={meetup} rel="noopener" target="_blank">RSVP for the next meeting</a>
       </div>
@@ -64,6 +71,11 @@ const groups = [
       <div class="section-head">
         <span class="eyebrow">Get involved</span>
         <h2>Special Interest Groups</h2>
+        <p class="lead">
+          Special interest groups (SIGs) are smaller communities that meet
+          regularly to go deep on a focused area of data management. Each is
+          practitioner-led and open to anyone who wants to take part.
+        </p>
       </div>
       <div class="grid grid-3">
         {groups.map((g) => (
@@ -75,6 +87,10 @@ const groups = [
           </div>
         ))}
       </div>
+      <p class="mt-3">
+        New faces are always welcome — pick the meeting or group that interests
+        you, RSVP on Meetup, and come along. No membership is required to attend.
+      </p>
     </div>
   </section>
 </Layout>
