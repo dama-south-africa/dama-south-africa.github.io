@@ -556,3 +556,62 @@ img {
     border-radius: 6px;
   }
 }
+
+/* ---- Accessibility utility ---- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- FAQ (About) ---- */
+.faq {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 4px 18px;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 28px 14px 0;
+  font-weight: 600;
+  color: var(--ink);
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 1;
+}
+.faq-item[open] summary::after { content: '\2013'; }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.faq-item > p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
