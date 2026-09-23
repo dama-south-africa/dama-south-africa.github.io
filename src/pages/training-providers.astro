@@ -5,9 +5,11 @@ const providers = [
   {
     name: 'Modelware Systems (Pty) Ltd',
     url: 'https://www.modelwaresystems.com/',
-    tagline: 'CDMP certification and DAMA-DMBOK training',
+    logo: '/modelware-logo.png',
+    badge: 'DAMA International Registered Education Provider (REP)',
+    tagline: 'Accredited for all CDMP certification',
     blurb:
-      'Modelware Systems specialises in data management certification and training built directly on the DAMA-DMBOK, with a strong focus on preparing practitioners for the Certified Data Management Professional (CDMP) exams. Courses are instructor-led by certified professionals and delivered online or in person, using case studies and real-world exercises.',
+      'Modelware Systems is a DAMA International Registered Education Provider (REP), accredited to deliver training across the full Certified Data Management Professional (CDMP) certification. Its courses are built directly on the DAMA-DMBOK and are instructor-led by certified professionals, delivered online or in person using case studies and real-world exercises.',
     offerings: [
       'CDMP Data Management Fundamentals — a four-day course covering the DMBOK, with 700+ practice questions, to prepare for the Fundamentals exam',
       'Specialist tracks: Data Governance, Data Quality, Data Architecture, Data Modelling, Metadata Management, Data Integration & Interoperability, and Reference & Master Data',
@@ -18,14 +20,16 @@ const providers = [
   {
     name: 'Info.Blueprint',
     url: 'https://infoblueprint.co.za/',
-    tagline: 'Data management, governance and quality training',
+    logo: '/infoblueprint-logo.png',
+    badge: 'Training Partner — Data Quality',
+    tagline: 'Data quality, governance and data capability training',
     blurb:
-      'Info.Blueprint is an information management consultancy with more than 18 years of experience, delivering training alongside its data governance, data quality and master data management services. Its practical courses — offered with partners including Datanacity and DataCamp — build the skills behind DMBOK-based certification and day-to-day data practice.',
+      'Info.Blueprint is an information management consultancy with more than 18 years of experience, offering practical training that builds data and AI capability alongside its data governance, data quality and master data management services. Its courses — offered with partners including Datanacity and DataCamp — focus on data quality, governance and everyday data skills rather than CDMP exam preparation.',
     offerings: [
-      'Data Management Fundamentals — DMBOK preparation for the CDMP Fundamentals exam',
-      'Practical Data Governance — implementation training aligned to the DAMA Data Governance Specialist certification',
-      'Practical Data Quality Management — aligned to the DAMA Data Quality Specialist certification',
-      'Data literacy, AI literacy and data analytics courses, plus DataCamp certifications in data analysis, data engineering and AI engineering',
+      'Practical Data Quality Management',
+      'Data Governance Fundamentals',
+      'Data literacy, AI literacy and data fundamentals',
+      'DataCamp certification pathways in data analysis, data engineering and AI engineering',
     ],
   },
 ];
@@ -33,7 +37,7 @@ const providers = [
 
 <Layout
   title="Training Providers — DAMA South Africa"
-  description="DAMA South Africa's registered training providers — Modelware Systems and Info.Blueprint — deliver DMBOK-based data management training and CDMP certification preparation."
+  description="DAMA South Africa's training partners — Modelware Systems, a DAMA International Registered Education Provider (REP), and Info.Blueprint — deliver DMBOK-based data management training and CDMP certification preparation."
 >
   <section class="section">
     <div class="container">
@@ -42,17 +46,19 @@ const providers = [
         <h1>Training Providers</h1>
         <p class="lead">
           Formal, DMBOK-based data management training and CDMP certification
-          preparation are delivered through our Registered Training Providers.
+          preparation are delivered through our accredited training partners.
         </p>
       </div>
       <div class="prose">
         <p>
           DAMA South Africa guides and supports members on the path to the
           globally recognised Certified Data Management Professional (CDMP)
-          credential, including a weekly CDMP Q&amp;A webinar. Structured,
-          formal training is delivered by our Registered Training Providers,
-          whose courses are built on the DAMA Guide to the Data Management Body
-          of Knowledge (DMBOK).
+          credential, including a weekly CDMP Q&amp;A webinar. Formal,
+          DMBOK-aligned training is delivered through our training partners.
+          Modelware Systems is a DAMA International Registered Education Provider
+          (REP), accredited to deliver training across the full CDMP
+          certification, while Info.Blueprint provides data quality, governance
+          and broader data capability training.
         </p>
       </div>
     </div>
@@ -64,8 +70,11 @@ const providers = [
         {
           providers.map((p) => (
             <article class="provider-card">
+              <div class="provider-logo">
+                <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />
+              </div>
               <div class="provider-head">
-                <span class="provider-badge">Registered Training Provider</span>
+                <span class="provider-badge">{p.badge}</span>
                 <h2>{p.name}</h2>
                 <p class="provider-tagline">{p.tagline}</p>
               </div>
@@ -107,6 +116,19 @@ const providers = [
     padding: 2rem;
     display: flex;
     flex-direction: column;
+  }
+  .provider-logo {
+    height: 96px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .provider-logo img {
+    max-height: 96px;
+    max-width: 300px;
+    width: auto;
+    object-fit: contain;
   }
   .provider-head {
     margin-bottom: 1rem;
