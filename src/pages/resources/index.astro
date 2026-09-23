@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  {
+    title: 'What is the CDMP certification?',
+    href: '/resources/what-is-cdmp-certification/',
+    summary:
+      'What the Certified Data Management Professional credential is, the Associate, Practitioner and Master levels, and how DAMA South Africa helps you prepare.',
+  },
+  {
+    title: 'Data governance under POPIA',
+    href: '/resources/data-governance-popia/',
+    summary:
+      'How sound data governance and data management underpin compliance with South Africa’s Protection of Personal Information Act (POPIA).',
+  },
+  {
+    title: 'The DMBOK knowledge areas explained',
+    href: '/resources/dmbok-knowledge-areas/',
+    summary:
+      'A plain-language tour of the knowledge areas in the DAMA Data Management Body of Knowledge (DMBOK) and how they fit together.',
+  },
+];
+---
+
+<Layout
+  title="Resources — DAMA South Africa"
+  description="Guides and articles from DAMA South Africa on data management, the CDMP certification, the DMBOK, and data governance under POPIA."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Resources</span>
+        <h1>Data management resources</h1>
+        <p class="lead">
+          Plain-language guides to data management, the DMBOK, the CDMP
+          certification and data governance in the South African context —
+          written by DAMA South Africa.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        {
+          articles.map((a) => (
+            <a class="card resource-card" href={a.href}>
+              <h2>{a.title}</h2>
+              <p>{a.summary}</p>
+              <span class="card-link">Read more &rarr;</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .resource-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .resource-card h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+  }
+  .resource-card .card-link {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    color: var(--blue, #243090);
+    font-weight: 600;
+  }
+</style>

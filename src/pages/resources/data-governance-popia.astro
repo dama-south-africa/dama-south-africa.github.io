@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Data governance under POPIA';
+const description =
+  'How sound data governance and data management underpin compliance with South Africa’s Protection of Personal Information Act (POPIA), mapped to the DMBOK.';
+const published = '2026-09-23';
+
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    url: 'https://dama-south-africa.github.io/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://dama-south-africa.github.io/logo.png',
+    },
+  },
+  datePublished: published,
+  dateModified: published,
+  mainEntityOfPage:
+    'https://dama-south-africa.github.io/resources/data-governance-popia/',
+  inLanguage: 'en-ZA',
+  about: 'POPIA, data governance, data management, South Africa',
+};
+---
+
+<Layout title={`${title} — DAMA South Africa`} description={description} jsonld={[article]}>
+  <article class="section">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <span class="eyebrow">Resources</span>
+        <h1>{title}</h1>
+        <p class="article-meta">By DAMA South Africa</p>
+        <p class="lead">
+          South Africa&rsquo;s Protection of Personal Information Act (POPIA)
+          sets out how organisations must handle personal information. Meeting it
+          is not just a legal exercise — it rests on the everyday disciplines of
+          data governance and data management.
+        </p>
+      </div>
+
+      <div class="prose">
+        <h2>What POPIA asks of organisations</h2>
+        <p>
+          POPIA (Act 4 of 2013) gives effect to the constitutional right to
+          privacy and is overseen by the Information Regulator. It requires a
+          <em>responsible party</em> (the organisation that decides why and how
+          personal information is processed) to process that information
+          lawfully against eight conditions: accountability, processing
+          limitation, purpose specification, further processing limitation,
+          information quality, openness, security safeguards, and data subject
+          participation. Behind each of those conditions sits a data management
+          capability.
+        </p>
+
+        <h2>Governance turns the conditions into practice</h2>
+        <p>
+          You cannot protect what you cannot see. Data governance — clear
+          ownership, policies, and a catalogue of what personal information you
+          hold, where it lives and why — is what makes accountability, purpose
+          specification and openness real rather than aspirational. A data
+          inventory and metadata make it possible to answer, quickly and
+          honestly, what data you have on a person and what you use it for.
+        </p>
+        <p>
+          The <strong>information quality</strong> condition maps directly to the
+          data management discipline of data quality: personal information must
+          be complete, accurate and not misleading. The
+          <strong>security safeguards</strong> condition maps to data security —
+          access controls, encryption and the safe handling of data through its
+          lifecycle. And <strong>data subject participation</strong> — a
+          person&rsquo;s right to ask what you hold and to have it corrected or
+          deleted — is only practical when your data is well catalogued and
+          integrated rather than scattered across systems no one has mapped.
+        </p>
+
+        <h2>Mapping POPIA to the DMBOK</h2>
+        <p>
+          The DAMA Guide to the Data Management Body of Knowledge (DMBOK) gives a
+          ready-made framework for this work. Data governance provides the
+          policies and accountability; metadata and data cataloguing make
+          personal information visible; data quality keeps it accurate; data
+          security protects it; and data lifecycle practices handle retention and
+          disposal. In other words, an organisation that manages its data well is
+          most of the way to POPIA readiness — and one that treats compliance as
+          a paperwork exercise, without the underlying data management, tends to
+          struggle.
+        </p>
+        <p>
+          For a tour of those disciplines, see our
+          <a href="/resources/dmbok-knowledge-areas/">guide to the DMBOK
+          knowledge areas</a>.
+        </p>
+
+        <h2>Where to start</h2>
+        <p>
+          Practical first steps are unglamorous but effective: appoint and
+          empower an information officer, build an inventory of the personal
+          information you hold and its purpose, agree who owns each data domain,
+          and set retention and access rules you can actually enforce. These are
+          governance activities first and legal activities second.
+        </p>
+        <p>
+          DAMA South Africa runs a special interest group on data protection for
+          data management professionals, and connects practitioners tackling
+          exactly these questions. Learn more
+          <a href="/about/">about the chapter</a>, explore
+          <a href="/community/">our meetings and special interest groups</a>, or
+          <a href="/become-a-member/">become a member</a>.
+        </p>
+        <p class="article-note">
+          This article is general information about data management practice, not
+          legal advice. For obligations specific to your organisation, consult
+          the Information Regulator&rsquo;s guidance or a qualified adviser.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>

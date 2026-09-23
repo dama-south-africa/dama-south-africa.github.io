@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'What is the CDMP certification?';
+const description =
+  'The Certified Data Management Professional (CDMP) is DAMA International’s globally recognised certification, based on the DMBOK. Here’s what it is, the levels, and how to prepare.';
+const published = '2026-09-23';
+
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    url: 'https://dama-south-africa.github.io/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://dama-south-africa.github.io/logo.png',
+    },
+  },
+  datePublished: published,
+  dateModified: published,
+  mainEntityOfPage:
+    'https://dama-south-africa.github.io/resources/what-is-cdmp-certification/',
+  inLanguage: 'en-ZA',
+  about: 'CDMP certification, DAMA International, data management',
+};
+---
+
+<Layout title={`${title} — DAMA South Africa`} description={description} jsonld={[article]}>
+  <article class="section">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <span class="eyebrow">Resources</span>
+        <h1>{title}</h1>
+        <p class="article-meta">By DAMA South Africa</p>
+        <p class="lead">
+          The Certified Data Management Professional (CDMP) is DAMA
+          International&rsquo;s globally recognised certification for data
+          management professionals. It is based on the DAMA Guide to the Data
+          Management Body of Knowledge (DMBOK) and demonstrates rounded,
+          tested competence across the discipline.
+        </p>
+      </div>
+
+      <div class="prose">
+        <h2>What the CDMP measures</h2>
+        <p>
+          The CDMP is built on the DMBOK, the reference framework that defines
+          the knowledge areas of data management — data governance, data
+          architecture, data modelling and design, data quality, metadata,
+          master and reference data, data integration, storage, security and
+          more. Rather than testing one tool or platform, the CDMP checks that
+          you understand how these areas work and fit together, which is why it
+          is recognised across industries and countries.
+        </p>
+
+        <h2>The certification levels</h2>
+        <p>
+          Every CDMP candidate takes the same starting point, the
+          <strong>CDMP Fundamentals exam</strong> — 100 multiple-choice
+          questions drawn from across the DMBOK, in a 90-minute exam (with extra
+          time available for English-second-language candidates). Your score on
+          that exam, together with specialist exams, determines your level:
+        </p>
+        <ul>
+          <li>
+            <strong>Associate</strong> — awarded on the Fundamentals exam alone,
+            the entry point for those newer to the profession.
+          </li>
+          <li>
+            <strong>Practitioner</strong> — a stronger Fundamentals result plus
+            <strong>two specialist exams</strong> in chosen knowledge areas,
+            reflecting several years of practical experience.
+          </li>
+          <li>
+            <strong>Master</strong> — the highest examined level: a top
+            Fundamentals result plus two specialist exams at the highest
+            threshold, for senior, deeply experienced practitioners.
+          </li>
+        </ul>
+        <p>
+          Specialist exams are available in areas such as Data Governance, Data
+          Quality, Data Modelling &amp; Design, Metadata Management and Master
+          &amp; Reference Data — so you can certify in the areas that match your
+          work. For the current score thresholds and exam rules, always check
+          the official CDMP site at
+          <a href="https://cdmp.info/" rel="noopener" target="_blank">cdmp.info</a>.
+        </p>
+
+        <h2>Why it&rsquo;s worth it</h2>
+        <p>
+          For individuals, the CDMP is portable proof of data management
+          competence that employers and clients recognise. For organisations,
+          having certified people raises the standard of data work and gives a
+          shared vocabulary rooted in the DMBOK. It is one of the few
+          credentials that spans the whole discipline rather than a single
+          niche.
+        </p>
+
+        <h2>How DAMA South Africa helps you prepare</h2>
+        <p>
+          As the local chapter of DAMA International, DAMA South Africa supports
+          members working toward the CDMP with practical guidance and a
+          <strong>weekly CDMP Q&amp;A webinar</strong> where you can ask
+          questions and prepare for the exams. Formal, DMBOK-based training is
+          delivered through our
+          <a href="/training-providers/">registered training providers</a> —
+          led by Modelware Systems, a DAMA International Registered Education
+          Provider (REP) for CDMP certification.
+        </p>
+        <p>
+          New to all of this? Start with our
+          <a href="/resources/dmbok-knowledge-areas/">guide to the DMBOK
+          knowledge areas</a>, learn more
+          <a href="/about/">about the chapter</a>, or
+          <a href="/become-a-member/">become a member</a> to join the community.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>

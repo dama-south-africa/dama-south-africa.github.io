@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'The DMBOK knowledge areas explained';
+const description =
+  'A plain-language tour of the eleven knowledge areas in the DAMA Data Management Body of Knowledge (DMBOK) and how they fit together around data governance.';
+const published = '2026-09-23';
+
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    url: 'https://dama-south-africa.github.io/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'DAMA South Africa',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://dama-south-africa.github.io/logo.png',
+    },
+  },
+  datePublished: published,
+  dateModified: published,
+  mainEntityOfPage:
+    'https://dama-south-africa.github.io/resources/dmbok-knowledge-areas/',
+  inLanguage: 'en-ZA',
+  about: 'DMBOK, data management knowledge areas, DAMA',
+};
+---
+
+<Layout title={`${title} — DAMA South Africa`} description={description} jsonld={[article]}>
+  <article class="section">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <span class="eyebrow">Resources</span>
+        <h1>{title}</h1>
+        <p class="article-meta">By DAMA South Africa</p>
+        <p class="lead">
+          The DAMA Guide to the Data Management Body of Knowledge (DMBOK) is the
+          reference framework for the profession. It organises data management
+          into eleven knowledge areas, arranged around data governance at the
+          centre.
+        </p>
+      </div>
+
+      <div class="prose">
+        <h2>Data governance at the centre</h2>
+        <p>
+          In the DMBOK, <strong>data governance</strong> sits at the hub of the
+          &ldquo;DAMA Wheel&rdquo;. It is the exercise of authority and control
+          over the management of data — the policies, ownership, standards and
+          decision-making that hold everything else together. The remaining ten
+          areas are the disciplines that governance coordinates.
+        </p>
+
+        <h2>Designing and building</h2>
+        <p>
+          <strong>Data architecture</strong> defines the blueprint — how data
+          flows through the organisation and how systems fit together.
+          <strong>Data modelling &amp; design</strong> turns that into precise
+          structures: the entities, attributes and relationships that describe
+          the business. <strong>Data storage &amp; operations</strong> keeps the
+          databases running, available and performing.
+        </p>
+
+        <h2>Protecting and moving data</h2>
+        <p>
+          <strong>Data security</strong> ensures the right people — and only the
+          right people — can access data, through authentication, access control
+          and protection of sensitive information. <strong>Data integration
+          &amp; interoperability</strong> covers how data moves and is combined
+          between systems, from batch loads to real-time interfaces.
+          <strong>Document &amp; content management</strong> extends the same
+          care to unstructured information: documents, records and content.
+        </p>
+
+        <h2>Trusted, shared data</h2>
+        <p>
+          <strong>Reference &amp; master data</strong> creates the single,
+          agreed versions of core entities — customers, products, suppliers —
+          that the whole organisation can rely on. <strong>Data warehousing
+          &amp; business intelligence</strong> brings data together for
+          reporting and analytics. <strong>Metadata</strong> — data about data —
+          is the connective tissue: the catalogues, definitions and lineage that
+          let people find, understand and trust the data they use.
+        </p>
+
+        <h2>Quality above all</h2>
+        <p>
+          <strong>Data quality</strong> runs through everything: managing the
+          completeness, accuracy, consistency and timeliness of data so it can
+          be trusted for decisions. Poor data quality quietly undermines every
+          other area, which is why it is treated as a discipline in its own
+          right.
+        </p>
+
+        <h2>How the areas fit together</h2>
+        <p>
+          The knowledge areas are not a checklist to work through in order —
+          they interlock. Good metadata makes data quality measurable; data
+          governance sets the standards that architecture and modelling
+          implement; master data and integration depend on each other. The
+          DMBOK&rsquo;s value is showing how the whole picture connects, which is
+          also why it underpins the
+          <a href="/resources/what-is-cdmp-certification/">CDMP certification</a>.
+        </p>
+        <p>
+          These same disciplines are what make regulatory readiness practical —
+          see how they map to
+          <a href="/resources/data-governance-popia/">data governance under
+          POPIA</a>. To go deeper, formal DMBOK-based training is delivered
+          through our
+          <a href="/training-providers/">registered training providers</a>, and
+          you can <a href="/become-a-member/">join the community</a> to learn
+          alongside other practitioners.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>
