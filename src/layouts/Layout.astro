@@ -12,6 +12,7 @@ interface Props {
   description?: string;
   image?: string;
   faq?: FaqItem[];
+  jsonld?: Record<string, unknown>[];
 }
 
 const {
@@ -19,12 +20,49 @@ const {
   description = 'DAMA South Africa is the local chapter of DAMA International — a community of data professionals advancing data management through meetings, special interest groups, CDMP certification and mentoring.',
   image = '/og-image.png',
   faq,
+  jsonld = [],
 } = Astro.props;
 
 const site = Astro.site ?? new URL('https://dama-south-africa.github.io');
 const canonical = new URL(Astro.url.pathname, site).href;
 const ogImage = new URL(image, site).href;
 const logoUrl = new URL('/logo.png', site).href;
+
+// Breadcrumbs — generated automatically from the URL path.
+const segLabels: Record<string, string> = {
+  about: 'About',
+  board: 'Board',
+  community: 'Community',
+  'training-providers': 'Training Providers',
+  contact: 'Contact',
+  'become-a-member': 'Become a Member',
+  resources: 'Resources',
+  'what-is-cdmp-certification': 'What is the CDMP certification?',
+  'data-governance-popia': 'Data governance under POPIA',
+  'dmbok-knowledge-areas': 'The DMBOK knowledge areas',
+};
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const crumbs = [{ name: 'Home', url: site.href }];
+let acc = '';
+for (const s of segments) {
+  acc += `/${s}`;
+  crumbs.push({
+    name: segLabels[s] ?? s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+    url: new URL(`${acc}/`, site).href,
+  });
+}
+const breadcrumbSchema = segments.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    }
+  : null;
 
 const organization = {
   '@context': 'https://schema.org',
@@ -95,6 +133,8 @@ const faqSchema =
 
     <script type="application/ld+json" set:html={JSON.stringify(organization)} />
     {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 
     <!-- Classic professional type: Libre Franklin -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
