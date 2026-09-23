@@ -14,7 +14,10 @@ const joinUrl =
   'https://join.mymembership.co.za/Join/Bio?communityId=3eb77fbc-7cc9-4365-adea-e50a1ce04b95';
 ---
 
-<Layout title="Become a Member — DAMA South Africa">
+<Layout
+  title="Become a Member — DAMA South Africa"
+  description="Become a member of DAMA South Africa and join a network of data management professionals — chapter meetings, SIGs, CDMP support, mentoring and more."
+>
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -28,13 +31,13 @@ const joinUrl =
 
       <div class="grid grid-2">
         <div class="prose">
-          <h3>Why join</h3>
+          <h2>Why join</h2>
           <ul>
             {benefits.map((b) => <li>{b}</li>)}
           </ul>
         </div>
         <div class="card">
-          <h3>Ready to join?</h3>
+          <h2>Ready to join?</h2>
           <p class="meta">Online membership</p>
           <p>
             Sign up online through our membership portal — it only takes a few
