@@ -84,6 +84,22 @@ img {
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
+/* Narrower measure for long-form articles */
+.container-narrow {
+  max-width: 760px;
+}
+.article-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+}
+.article-note {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border, #e6e8ef);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 /* ---- Accessibility ---- */
 .skip-link {
@@ -196,6 +212,7 @@ img {
   color: var(--ink);
   font-weight: 500;
   font-size: 0.98rem;
+  white-space: nowrap;
 }
 .nav-link:hover {
   background: var(--bg-alt);
