@@ -29,11 +29,46 @@ const providers = [
     ],
   },
 ];
+
+const faq = [
+  {
+    q: 'Who offers CDMP certification training in South Africa?',
+    a: "Modelware Systems — a DAMA International Registered Education Provider (REP) — delivers CDMP certification training across all levels in South Africa. DAMA South Africa also runs a weekly CDMP Q&A webinar to support members preparing for the exams.",
+  },
+  {
+    q: 'Is Modelware Systems a DAMA-accredited training provider?',
+    a: "Yes. Modelware Systems is a DAMA International Registered Education Provider (REP), accredited to deliver training across the full Certified Data Management Professional (CDMP) certification, from the Fundamentals exam through the specialist areas.",
+  },
+  {
+    q: 'What CDMP-related training does Info.Blueprint provide?',
+    a: "Info.Blueprint provides Data Quality training, supporting practitioners who are specialising in the Data Quality knowledge area of the DMBOK within the CDMP pathway.",
+  },
+];
+
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'CDMP Certification Training',
+  description:
+    'DMBOK-based training that prepares data professionals for the DAMA International Certified Data Management Professional (CDMP) certification, across the Associate, Practitioner and Master levels.',
+  provider: {
+    '@type': 'EducationalOrganization',
+    name: 'Modelware Systems (Pty) Ltd',
+    url: 'https://www.modelwaresystems.com/',
+    description:
+      'DAMA International Registered Education Provider (REP) for CDMP certification training.',
+  },
+  educationalCredentialAwarded: 'Certified Data Management Professional (CDMP)',
+  about: 'Data management, DAMA-DMBOK, CDMP certification',
+  inLanguage: 'en',
+};
 ---
 
 <Layout
   title="Training Providers — DAMA South Africa"
   description="DAMA South Africa's training partners — Modelware Systems, a DAMA International Registered Education Provider (REP), and Info.Blueprint — deliver DMBOK-based data management training and CDMP certification preparation."
+  faq={faq}
+  jsonld={[courseSchema]}
 >
   <section class="section">
     <div class="container">
@@ -94,6 +129,25 @@ const providers = [
         will point you to the right course, or come along to the weekly CDMP
         Q&amp;A webinar.
       </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>CDMP training questions</h2>
+      </div>
+      <div class="faq">
+        {
+          faq.map((item) => (
+            <details class="faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))
+        }
+      </div>
     </div>
   </section>
 </Layout>

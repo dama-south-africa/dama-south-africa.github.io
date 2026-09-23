@@ -12,11 +12,31 @@ const benefits = [
 // Online membership join portal — create a DAMA profile.
 const joinUrl =
   'https://join.mymembership.co.za/Join/Bio?communityId=3eb77fbc-7cc9-4365-adea-e50a1ce04b95';
+
+const faq = [
+  {
+    q: 'How much does DAMA South Africa membership cost?',
+    a: 'Standard individual membership is R450 per year.',
+  },
+  {
+    q: 'Who can join DAMA South Africa?',
+    a: 'Membership is open to anyone with an interest in data management — practitioners and specialists, managers and team leads, and professionals moving into the field.',
+  },
+  {
+    q: 'How do I join DAMA South Africa?',
+    a: 'You join online in a few minutes through the membership portal — click "Create a DAMA profile" on the Become a Member page and follow the steps. The committee will then be in touch to help you get involved.',
+  },
+  {
+    q: 'Does DAMA South Africa offer corporate membership?',
+    a: 'There is no corporate membership, but organisations can request Corporate Certificates. Email membership@dama.org.za to arrange.',
+  },
+];
 ---
 
 <Layout
   title="Become a Member — DAMA South Africa"
   description="Join DAMA South Africa for R450 a year — a network of data management professionals with chapter meetings, SIGs, CDMP support, mentoring and the global DAMA community."
+  faq={faq}
 >
   <section class="section">
     <div class="container">
@@ -61,6 +81,25 @@ const joinUrl =
             <a href="mailto:membership@dama.org.za">email us</a> to arrange.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Membership questions</h2>
+      </div>
+      <div class="faq">
+        {
+          faq.map((item) => (
+            <details class="faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))
+        }
       </div>
     </div>
   </section>
