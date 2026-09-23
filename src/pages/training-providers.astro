@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const providers = [
+  {
+    name: 'Modelware Systems (Pty) Ltd',
+    url: 'https://www.modelwaresystems.com/',
+    tagline: 'CDMP certification and DAMA-DMBOK training',
+    blurb:
+      'Modelware Systems specialises in data management certification and training built directly on the DAMA-DMBOK, with a strong focus on preparing practitioners for the Certified Data Management Professional (CDMP) exams. Courses are instructor-led by certified professionals and delivered online or in person, using case studies and real-world exercises.',
+    offerings: [
+      'CDMP Data Management Fundamentals — a four-day course covering the DMBOK, with 700+ practice questions, to prepare for the Fundamentals exam',
+      'Specialist tracks: Data Governance, Data Quality, Data Architecture, Data Modelling, Metadata Management, Data Integration & Interoperability, and Reference & Master Data',
+      'AI Governance',
+      'Exam preparation across the CDMP Associate, Practitioner and Master levels',
+    ],
+  },
+  {
+    name: 'Info.Blueprint',
+    url: 'https://infoblueprint.co.za/',
+    tagline: 'Data management, governance and quality training',
+    blurb:
+      'Info.Blueprint is an information management consultancy with more than 18 years of experience, delivering training alongside its data governance, data quality and master data management services. Its practical courses — offered with partners including Datanacity and DataCamp — build the skills behind DMBOK-based certification and day-to-day data practice.',
+    offerings: [
+      'Data Management Fundamentals — DMBOK preparation for the CDMP Fundamentals exam',
+      'Practical Data Governance — implementation training aligned to the DAMA Data Governance Specialist certification',
+      'Practical Data Quality Management — aligned to the DAMA Data Quality Specialist certification',
+      'Data literacy, AI literacy and data analytics courses, plus DataCamp certifications in data analysis, data engineering and AI engineering',
+    ],
+  },
+];
+---
+
+<Layout
+  title="Training Providers — DAMA South Africa"
+  description="DAMA South Africa's registered training providers — Modelware Systems and Info.Blueprint — deliver DMBOK-based data management training and CDMP certification preparation."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Training</span>
+        <h1>Training Providers</h1>
+        <p class="lead">
+          Formal, DMBOK-based data management training and CDMP certification
+          preparation are delivered through our Registered Training Providers.
+        </p>
+      </div>
+      <div class="prose">
+        <p>
+          DAMA South Africa guides and supports members on the path to the
+          globally recognised Certified Data Management Professional (CDMP)
+          credential, including a weekly CDMP Q&amp;A webinar. Structured,
+          formal training is delivered by our Registered Training Providers,
+          whose courses are built on the DAMA Guide to the Data Management Body
+          of Knowledge (DMBOK).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="provider-list">
+        {
+          providers.map((p) => (
+            <article class="provider-card">
+              <div class="provider-head">
+                <span class="provider-badge">Registered Training Provider</span>
+                <h2>{p.name}</h2>
+                <p class="provider-tagline">{p.tagline}</p>
+              </div>
+              <p>{p.blurb}</p>
+              <h3 class="provider-sub">Training offered</h3>
+              <ul>
+                {p.offerings.map((o) => (
+                  <li>{o}</li>
+                ))}
+              </ul>
+              <a class="btn btn-primary" href={p.url} rel="noopener" target="_blank">
+                Visit {p.name}
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <p class="mt-3 provider-note">
+        Interested in CDMP training or certification? Email
+        <a href="mailto:membership@dama.org.za">membership@dama.org.za</a> and we
+        will point you to the right course, or come along to the weekly CDMP
+        Q&amp;A webinar.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .provider-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1000px;
+  }
+  .provider-card {
+    background: #fff;
+    border: 1px solid var(--border, #e6e8ef);
+    border-radius: 14px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .provider-head {
+    margin-bottom: 1rem;
+  }
+  .provider-badge {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: var(--blue-tint, #eaecf6);
+    color: var(--blue, #243090);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .provider-card h2 {
+    margin: 0 0 0.2rem;
+    font-size: 1.35rem;
+  }
+  .provider-tagline {
+    margin: 0;
+    color: var(--blue, #243090);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .provider-sub {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 1.25rem 0 0.5rem;
+  }
+  .provider-card ul {
+    margin: 0 0 1.5rem;
+    padding-left: 1.1rem;
+  }
+  .provider-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  .provider-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  .provider-note {
+    max-width: 1000px;
+  }
+</style>
