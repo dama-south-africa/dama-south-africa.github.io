@@ -1,10 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // Final production domain. Only affects sitemap/canonical URLs, not the look.
-  // While previewing on Cloudflare you can temporarily set this to your
-  // *.pages.dev URL, then switch back to the custom domain at cutover.
-  site: 'https://dama.org.za',
+  // Live production domain. Currently served on GitHub Pages.
+  // When you cut over to https://dama.org.za, change this to that URL and add
+  // a public/CNAME file — canonical URLs and the sitemap follow automatically.
+  site: 'https://dama-south-africa.github.io',
+  integrations: [sitemap()],
 });
