@@ -34,8 +34,8 @@ const article = {
 ---
 
 <Layout title={`${title} — DAMA South Africa`} description={description} jsonld={[article]}>
-  <article class="section">
-    <div class="container container-narrow">
+  <section class="page-hero">
+    <div class="container">
       <div class="section-head">
         <span class="eyebrow">Resources</span>
         <h1>{title}</h1>
@@ -48,7 +48,11 @@ const article = {
           tested competence across the discipline.
         </p>
       </div>
+    </div>
+  </section>
 
+  <article class="section">
+    <div class="container container-narrow">
       <div class="prose">
         <h2>What the CDMP Measures</h2>
         <p>

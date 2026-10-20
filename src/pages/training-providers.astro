@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 
 const providers = [
   {
@@ -70,16 +71,14 @@ const courseSchema = {
   faq={faq}
   jsonld={[courseSchema]}
 >
+  <PageHero
+    eyebrow="Training"
+    title="Training Providers"
+    lead="Formal, DMBOK-based data management training and CDMP certification preparation are delivered through our accredited training partners."
+  />
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Training</span>
-        <h1>Training Providers</h1>
-        <p class="lead">
-          Formal, DMBOK-based data management training and CDMP certification
-          preparation are delivered through our accredited training partners.
-        </p>
-      </div>
       <div class="prose">
         <p>
           DAMA South Africa guides and supports members on the path to the
@@ -132,9 +131,9 @@ const courseSchema = {
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <span class="eyebrow">FAQ</span>
         <h2>CDMP Training Questions</h2>
       </div>

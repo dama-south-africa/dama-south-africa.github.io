@@ -34,8 +34,8 @@ const article = {
 ---
 
 <Layout title={`${title} — DAMA South Africa`} description={description} jsonld={[article]}>
-  <article class="section">
-    <div class="container container-narrow">
+  <section class="page-hero">
+    <div class="container">
       <div class="section-head">
         <span class="eyebrow">Resources</span>
         <h1>{title}</h1>
@@ -47,7 +47,11 @@ const article = {
           data governance and data management.
         </p>
       </div>
+    </div>
+  </section>
 
+  <article class="section">
+    <div class="container container-narrow">
       <div class="prose">
         <h2>What POPIA Asks of Organisations</h2>
         <p>

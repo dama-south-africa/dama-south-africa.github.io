@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 
 const faq = [
   {
@@ -42,16 +43,14 @@ const faq = [
   description="Learn about DAMA South Africa — our mission, CDMP certification guidance and training, mentoring, and the special interest groups advancing data management practice since 2006."
   faq={faq}
 >
+  <PageHero
+    eyebrow="About us"
+    title="About DAMA South Africa"
+    lead="DAMA South Africa is the local chapter of DAMA International, the global not-for-profit association for data management professionals."
+  />
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">About us</span>
-        <h1>About DAMA South Africa</h1>
-        <p class="lead">
-          DAMA South Africa is the local chapter of DAMA International, the global
-          not-for-profit association for data management professionals.
-        </p>
-      </div>
       <div class="prose">
         <p>
           Our mission is to promote the understanding, development and practice
@@ -105,9 +104,9 @@ const faq = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-tint">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <span class="eyebrow">CDMP</span>
         <h2>Certification and Training</h2>
       </div>

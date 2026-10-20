@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 
 const board = [
   {
@@ -54,17 +55,14 @@ const support = [
   title="Board — DAMA South Africa"
   description="Meet the volunteer board leading DAMA South Africa, the local chapter of DAMA International and its data management community."
 >
+  <PageHero
+    eyebrow="Leadership"
+    title="Meet the Board"
+    lead="DAMA South Africa is run by a volunteer board of data management practitioners."
+  />
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Leadership</span>
-        <h1>Meet the Board</h1>
-        <p class="lead">
-          DAMA South Africa is run by a volunteer board of data management
-          practitioners.
-        </p>
-      </div>
-
       <h2 class="visually-hidden">Board Members</h2>
       <div class="board-grid">
         {

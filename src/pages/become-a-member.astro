@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
 
 const benefits = [
   'Attend every monthly online chapter meeting and presentation',
@@ -39,17 +40,14 @@ const faq = [
   description="Join DAMA South Africa for R450 a year — a network of data management professionals with chapter meetings, SIGs, CDMP support, mentoring and the global DAMA community."
   faq={faq}
 >
+  <PageHero
+    eyebrow="Membership"
+    title="Become a Member"
+    lead="Join a community of data management practitioners across South Africa and take part in everything the chapter offers."
+  />
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Membership</span>
-        <h1>Become a Member</h1>
-        <p class="lead">
-          Join a community of data management practitioners across South Africa
-          and take part in everything the chapter offers.
-        </p>
-      </div>
-
       <div class="grid grid-2">
         <div class="prose">
           <h2>Why Join</h2>
