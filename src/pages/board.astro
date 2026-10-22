@@ -109,7 +109,7 @@ const support = [
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head center">
         <span class="eyebrow">Support team</span>
         <h2>Also Supporting DAMA South Africa</h2>
         <p class="lead">
@@ -167,12 +167,15 @@ const support = [
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2.5rem 1.5rem;
     max-width: 1000px;
+    margin-inline: auto;
+    justify-content: center;
   }
   /* two support people — keep the cards grouped, not stretched across */
   .support-grid {
     grid-template-columns: repeat(2, minmax(180px, 220px));
-    justify-content: start;
+    justify-content: center;
     max-width: 600px;
+    margin-inline: auto;
   }
   .board-card {
     text-align: center;
